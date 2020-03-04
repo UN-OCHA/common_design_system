@@ -68,6 +68,11 @@ a:focus {
   display: none;
 }
 
+/* .cd-icon {
+  width: 1rem;
+  height: 1rem;
+} */
+
 .cd-layout-container {
   margin: 0 auto;
   max-width: var(--cd-max-body-width);
