@@ -34,6 +34,7 @@ We will also find this markup in the cd-header and other components because most
           <div class="cd-container cd-global-header__inner">
 
             <div class="region region-header-top cd-global-header__actions">
+              <!-- user menu here -->
 ```
 
 Moving away from this reliance is a goal.
