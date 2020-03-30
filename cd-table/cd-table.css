@@ -29,15 +29,15 @@ tfoot {
 }
 
 /* Row numbers */
-.row-numbers {
+.cd-table--row-numbers {
   counter-reset: rowNumber;
 }
 
-.row-numbers tbody tr {
+.cd-table--row-numbers tbody tr {
   counter-increment: rowNumber;
 }
 
-.row-numbers tbody tr td.cd-table--row-num:first-child::before {
+.cd-table--row-numbers tbody tr td.cd-table--row-num:first-child::before {
   content: counter(rowNumber);
   min-width: 1em;
   margin-right: 0.5em;
@@ -84,9 +84,16 @@ tfoot {
     position: relative;
     padding: 0.5rem;
     padding-left: 40% !important;
+    min-height: 2rem; /* label should wrap */
     white-space: normal !important;
     text-align: left;
   }
+
+  /* td:empty {
+    border-bottom: none;
+    padding: 0;
+    min-height: unset;
+  } */
 
   td:before {
     position: absolute;
@@ -102,11 +109,15 @@ tfoot {
     content: attr(data-content);
   }
 
-  .row-numbers tbody tr td.cd-table--row-num {
+  /* td:empty:before {
+    content: "";
+  } */
+
+  .cd-table--row-numbers tbody tr td.cd-table--row-num {
     height: 3rem;
   }
 
-  .row-numbers tbody tr td.cd-table--row-num::before {
+  .cd-table--row-numbers tbody tr td.cd-table--row-num::before {
     font-weight: bold;
     font-size: 1.5rem;
   }
