@@ -42,7 +42,13 @@
   fill: var(--cd-white);
   width: 2rem;
   height: 2rem;
+  /* Icon before */
   padding: 0 0.5rem 0 0;
+}
+
+.cd-button--icon span + svg {
+/* Icon after */
+  padding: 0 0 0 0.5rem;
 }
 
 .cd-button--icon:hover svg,
