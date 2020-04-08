@@ -29,6 +29,11 @@
     display: flex;
   }
 
+  .cd-grid-2-col.cd-grid--grow > *:last-child {
+    flex: 1 0 100%;
+    max-width: unset;
+  }
+
   .cd-grid-3-col > * {
     flex: 0 0 48%;
   }
@@ -87,6 +92,10 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(200px, 1fr));
       grid-gap: 1rem;
+    }
+
+    .cd-grid-2-col.cd-grid--grow > *:last-child {
+      grid-column: -1/1;
     }
 
     .cd-grid-3-col {
