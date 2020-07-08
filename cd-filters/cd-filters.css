@@ -109,6 +109,10 @@
     margin-bottom: 2rem;
   }
 
+  .cd-filters__btn.cd-button {
+    display: none;
+  }
+
   .cd-filters__form {
     display: block;
   }
