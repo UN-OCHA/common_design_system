@@ -109,6 +109,11 @@
     margin-bottom: 2rem;
   }
 
+  /*This is needed for IE11
+  No support for CSS custom properties means
+  --dropdown: false; property on filter container is not recognised
+  so the cd-dropdown.js creates a toggler button on desktop
+  This hides it when that happens.*/
   .cd-filters__btn.cd-button {
     display: none;
   }
