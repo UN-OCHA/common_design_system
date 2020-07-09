@@ -70,6 +70,8 @@ function getToggableParents(element) {
       elements.push(element);
     }
     element = element.parentNode;
+
+    console.log(element);
   }
   return elements;
 }
@@ -149,6 +151,7 @@ function handleResize(selector) {
   var elements = document.querySelectorAll('[data-cd-toggable]');
   for (var i = 0, l = elements.length; i < l; i++) {
     updateToggable(elements[i]);
+    //console.log(elements);
   }
 }
 
@@ -231,6 +234,8 @@ function createButton(element) {
 function setToggable(element, toggler) {
   var toggler = element.previousElementSibling;
 
+  console.log(toggler);
+
   // Skip if the toggler is not a button or has already been processed.
   if (toggler) {
     // Togglers should be buttons to avoid mis-processing elements
@@ -289,6 +294,7 @@ function setToggable(element, toggler) {
 
   // Add the toggler before the toggable element if not already.
   if (element.previousElementSibling !== toggler) {
+    console.log('this');
     element.parentNode.insertBefore(toggler, element);
   }
 }
@@ -320,11 +326,17 @@ function unsetToggable(element) {
  * markup reflects the current behavior of the element.
  */
 function updateToggable(element) {
+  console.log(element);
+  var test = window.getComputedStyle(element, null).getPropertyValue('--dropdown') ;
+    console.log(test);
   if (window.getComputedStyle(element, null).getPropertyValue('--dropdown') === 'false') {
     unsetToggable(element);
+
+    console.log('resize 1');
   }
   else {
     setToggable(element);
+    console.log('resize 2');
   }
 }
 
@@ -353,7 +365,7 @@ if (document.documentElement.classList.contains('js')) {
   document.addEventListener('click', handleClickAway);
 
   document.addEventListener('click', handleEscape);
-  document.addEventListener('click', handleResize);
+  window.addEventListener('click', handleResize);
   document.addEventListener('click', handleToggle);
 
   // Initialize toggable dropdown.
