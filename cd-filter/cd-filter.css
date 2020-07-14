@@ -107,17 +107,6 @@
     margin-bottom: 2rem;
   }
 
-  /*This is needed for IE11
-  No support for CSS custom properties means
-  --dropdown: false; property on filter container is not recognised
-  so the cd-dropdown.js creates a toggler button on desktop
-  This hides it when that happens.*/
-  .cd-filter__btn {
-    @media all and (-ms-high-contrast: none) {
-      display: none;
-    }
-  }
-
   .cd-filter__form form {
     display: flex;
     flex-wrap: wrap;
@@ -178,6 +167,17 @@
 
   .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group:last-child {
     padding-right: 0;
+  }
+}
+
+/*This is needed for IE11
+No support for CSS custom properties means
+--dropdown: false; property on filter container is not recognised
+so the cd-dropdown.js creates a toggler button on desktop
+This hides it when that happens.*/
+@media (min-width: 768px) and (-ms-high-contrast: none) {
+  .cd-filter__btn {
+    display: none;
   }
 }
 
