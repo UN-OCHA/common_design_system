@@ -353,7 +353,7 @@ if (document.documentElement.classList.contains('js')) {
   document.addEventListener('click', handleClickAway);
 
   document.addEventListener('click', handleEscape);
-  document.addEventListener('click', handleResize);
+  window.addEventListener('click', handleResize);
   document.addEventListener('click', handleToggle);
 
   // Initialize toggable dropdown.
