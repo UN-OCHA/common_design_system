@@ -31,7 +31,6 @@
 }
 
 .cd-filters__form {
-  display: none;
   background: var(--cd-light-grey);
   width: 100%;
   padding: 1rem;
@@ -105,7 +104,6 @@
 
 @media (min-width: 768px) {
   .cd-filters {
-  --dropdown: false;
     margin-bottom: 2rem;
   }
 
@@ -114,12 +112,10 @@
   --dropdown: false; property on filter container is not recognised
   so the cd-dropdown.js creates a toggler button on desktop
   This hides it when that happens.*/
-  .cd-filters__btn.cd-button {
-    display: none;
-  }
-
-  .cd-filters__form {
-    display: block;
+  .cd-filters__btn {
+    @media all and (-ms-high-contrast: none) {
+      display: none;
+    }
   }
 
   .cd-filters__form form {
