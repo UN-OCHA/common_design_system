@@ -320,7 +320,6 @@ function unsetToggable(element) {
  * markup reflects the current behavior of the element.
  */
 function updateToggable(element) {
-  var test = window.getComputedStyle(element, null).getPropertyValue('--dropdown') ;
   if (window.getComputedStyle(element, null).getPropertyValue('--dropdown') === 'false') {
     unsetToggable(element);
   }
