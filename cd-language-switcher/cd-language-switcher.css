@@ -1,0 +1,33 @@
+.cd-dropdown {
+  display: none;
+}
+
+.js-open .cd-dropdown,
+[data-hidden='false'], 
+.cd-dropdown[data-hidden='false'] {
+  display: block;
+}
+
+.no-js .cd-dropdown {
+  display: block;
+  position: relative;
+}
+
+.cd-icon--arrow-down {
+  fill: var(--cd-white);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Some buttons have SVG icons */
+.cd-dropdown__btn svg {
+  fill: var(--cd-black);
+  width: 1rem;
+  height: 1rem;
+  padding: 0 0 0 4px;
+}
+
+.cd-dropdown__btn:hover svg,
+.cd-dropdown__btn:focus svg {
+  fill: var(--cd-ocha-blue);
+}
