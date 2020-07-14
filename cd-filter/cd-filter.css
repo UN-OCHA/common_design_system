@@ -1,109 +1,109 @@
-.cd-filters {
+.cd-filter {
   margin-bottom: 1rem;
 }
 
-.cd-filters__btn {
+.cd-filter__btn {
   width: 100%;
   background: var(--cd-light-grey);
   color: var(--cd-dark-grey);
 }
 
-.cd-filters__btn svg {
+.cd-filter__btn svg {
   fill: var(--cd-dark-grey);
 }
 
-.cd-filters__btn:hover {
+.cd-filter__btn:hover {
   background: var(--cd-dark-grey);
   color: var(--cd-light-grey);
 }
 
-.cd-filters__btn:hover svg {
+.cd-filter__btn:hover svg {
   fill: var(--cd-white);
 }
 
-.cd-filters__btn:focus {
+.cd-filter__btn:focus {
   color: var(--cd-white);
   background: var(--cd-dark-grey);
 }
 
-.cd-filters__btn:focus svg {
+.cd-filter__btn:focus svg {
   fill: var(--cd-white);
 }
 
-.cd-filters__form {
+.cd-filter__form {
   background: var(--cd-light-grey);
   width: 100%;
   padding: 1rem;
 }
 
-.cd-filters__form label {
+.cd-filter__form label {
   display: block;
   margin: 0 0 0.5rem;
 }
 
-.cd-filters__group {
+.cd-filter__group {
   margin: 0 0 1rem;
 }
 
-.cd-filters__form select {
+.cd-filter__form select {
   width: 100%;
   max-width: 100%;
 }
 
-.cd-filters__form fieldset ul {
+.cd-filter__form fieldset ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.cd-filters__input[type='search'],
-.cd-filters__input[type='text'] {
+.cd-filter__input[type='search'],
+.cd-filter__input[type='text'] {
   color: var(--cd-dark-grey);
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
 }
 
-.cd-filters__input[type='search']:focus,
-.cd-filters__input[type='text']:focus {
+.cd-filter__input[type='search']:focus,
+.cd-filter__input[type='text']:focus {
   outline: 0;
   /* RGBA and custom properties? */
   box-shadow: 0 0 4px rgba(var(--cd-mid-grey), 0.7);
   box-shadow: 0 0 4px var(--cd-highlight-red);
 }
 
-.cd-filters__input::-webkit-input-placeholder {
+.cd-filter__input::-webkit-input-placeholder {
   color: var(--cd-dark-grey);
   font-style: italic;
 }
 
-.cd-filters__input::-moz-placeholder {
+.cd-filter__input::-moz-placeholder {
   color: var(--cd-dark-grey);
   font-style: italic;
 }
 
-.cd-filters__input:-ms-input-placeholder {
+.cd-filter__input:-ms-input-placeholder {
   color: var(--cd-dark-grey);
   font-style: italic;
 }
 
-.cd-filters__input:-moz-placeholder {
+.cd-filter__input:-moz-placeholder {
   color: var(--cd-dark-grey);
   font-style: italic;
 }
 
-.cd-filters__input::-webkit-search-cancel-button {
+.cd-filter__input::-webkit-search-cancel-button {
   position: relative;
   right: 10px;
 }
 
 /* Safari fix */
-.cd-filters__input::-webkit-search-decoration {
+.cd-filter__input::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 @media (min-width: 768px) {
-  .cd-filters {
+  .cd-filter {
     margin-bottom: 2rem;
   }
 
@@ -112,19 +112,19 @@
   --dropdown: false; property on filter container is not recognised
   so the cd-dropdown.js creates a toggler button on desktop
   This hides it when that happens.*/
-  .cd-filters__btn {
+  .cd-filter__btn {
     @media all and (-ms-high-contrast: none) {
       display: none;
     }
   }
 
-  .cd-filters__form form {
+  .cd-filter__form form {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  .cd-filters__group {
+  .cd-filter__group {
     padding-right: 1rem;
   }
 
@@ -138,57 +138,57 @@
   /* https://alistapart.com/article/quantity-queries-for-css */
 
   /* If one element */
-  .cd-filters__group:only-of-type,
+  .cd-filter__group:only-of-type,
   /* If two elements */
-  .cd-filters__group:nth-last-child(2):first-child,
-  .cd-filters__group:nth-last-child(2):first-child ~ .cd-filters__group,
-  .cd-filters__group:nth-last-child(2):first-child ~ .cd-export,
+  .cd-filter__group:nth-last-child(2):first-child,
+  .cd-filter__group:nth-last-child(2):first-child ~ .cd-filter__group,
+  .cd-filter__group:nth-last-child(2):first-child ~ .cd-export,
   /* If three elements */
-  .cd-filters__group:nth-last-child(3):first-child,
-  .cd-filters__group:nth-last-child(3):first-child ~ .cd-filters__group,
-  .cd-filters__group:nth-last-child(3):first-child ~ .cd-export {
+  .cd-filter__group:nth-last-child(3):first-child,
+  .cd-filter__group:nth-last-child(3):first-child ~ .cd-filter__group,
+  .cd-filter__group:nth-last-child(3):first-child ~ .cd-export {
     flex: 1 0 33%;
     max-width: 33%;
   }
 
-  .cd-filters__group:nth-last-child(2):first-child ~ .cd-filters__group:last-child,
-  .cd-filters__group:nth-last-child(3):first-child ~ .cd-filters__group:last-child {
+  .cd-filter__group:nth-last-child(2):first-child ~ .cd-filter__group:last-child,
+  .cd-filter__group:nth-last-child(3):first-child ~ .cd-filter__group:last-child {
     padding-right: 0;
   }
 
   /* If four elements */
-  .cd-filters__group:nth-last-child(4):first-child,
-  .cd-filters__group:nth-last-child(4):first-child ~ .cd-filters__group,
-  .cd-filters__group:nth-last-child(4):first-child ~ .cd-export {
+  .cd-filter__group:nth-last-child(4):first-child,
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group,
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-export {
     flex: 1 0 25%;
     max-width: 25%;
   }
 
-  .cd-filters__group:nth-last-child(4):first-child ~ .cd-filters__group:last-child {
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group:last-child {
     padding-right: 0;
   }
 
   /* If five elements */
-  .cd-filters__group:nth-last-child(5):first-child,
-  .cd-filters__group:nth-last-child(5):first-child ~ .cd-filters__group,
-  .cd-filters__group:nth-last-child(5):first-child ~ .cd-export {
+  .cd-filter__group:nth-last-child(5):first-child,
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group,
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-export {
     flex: 1 0 20%;
     max-width: 20%;
   }
 
-  .cd-filters__group:nth-last-child(5):first-child ~ .cd-filters__group:last-child {
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group:last-child {
     padding-right: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .cd-filters__btn svg {
+  .cd-filter__btn svg {
     width: 22px;
     height: 22px;
     padding: 0 0 0 4px;
   }
 
-  .cd-filters__btn-text {
+  .cd-filter__btn-text {
     display: block;
   }
 }
