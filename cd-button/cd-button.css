@@ -1,5 +1,15 @@
+:root {
+  --cd-ocha-primary-color:  hsl(210, 70%, 56%);
+  --cd-ocha-darkbutton-default:  hsl(210, 70%, 56%);
+  --cd-ocha-lightbutton-default:  hsl(210, 70%, 81%);
+  --cd-ocha-button-hover:  hsl(210, 70%, 71%);
+  --cd-ocha-button-border:  hsl(210, 70%, 31%);
+  --cd-ocha-lightbutton-text:  hsl(210, 70%, 31%);
+  --cd-ocha-darkbutton-text:  #ffffff;
+}
+
 .dark {
-  background-color: var(--cd-ocha-blue);
+  background-color: var(--cd-ocha-primary-color);
 }
 
 .dark,
@@ -11,13 +21,15 @@
 
 .cd-button {
   -webkit-appearance: none;
-  border-radius: 0;
+  border-radius: 3px;
   box-shadow: none;
-  border: 0;
+  border: 2px solid transparent;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   /*transition: background 0.3s ease;*/
   width: auto;
+  background-color: var(--cd-ocha-lightbutton-default);
+  color: var(--cd-ocha-lightbutton-text);
 }
 
 .cd-button--lightstyle {
@@ -39,11 +51,12 @@
 
 .cd-button:hover,
 .cd-button:focus {
-  /* background-color: rbga(0, 0 ,0, 0.1); */
+  background-color: var(--cd-ocha-button-hover);
 }
 
 .cd-button:focus {
-  outline: 3px solid var(--cd-ocha-blue);
+  outline: 0 solid var(--cd-ocha-blue);
+  border: 2px solid var(--cd-ocha-button-border);
 }
 
 .cd-button--style {
