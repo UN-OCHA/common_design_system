@@ -1,3 +1,14 @@
+.dark {
+  background-color: var(--cd-ocha-blue);
+}
+
+.dark,
+.light {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
 .cd-button {
   -webkit-appearance: none;
   border-radius: 0;
@@ -5,8 +16,13 @@
   border: 0;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  /*transition: background 0.3s ease;*/
   width: auto;
+}
+
+.cd-button--lightstyle {
+  background: var(--cd-ocha-light-blue);
+  color: var(--cd-white);
 }
 
 .cd-button--small {
@@ -23,7 +39,7 @@
 
 .cd-button:hover,
 .cd-button:focus {
-  background-color: rbga(0, 0 ,0, 0.1);
+  /* background-color: rbga(0, 0 ,0, 0.1); */
 }
 
 .cd-button:focus {
@@ -35,9 +51,18 @@
   color: var(--cd-white);
 }
 
-.cd-button--style:hover,
+.cd-button--style:hover {
+  background: var(--cd-button-hover);
+  color: var(--cd-white);
+}
+
+.cd-button--lightstyle:hover {
+  background: var(--cd-button-hover);
+  color: var(--cd-white);
+}
+
 .cd-button--style:focus {
-  background: var(--cd-dark-blue);
+  background: var(--cd-button-focus);
   color: var(--cd-white);
 }
 
