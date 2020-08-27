@@ -31,12 +31,13 @@
   font-size: 1rem;
   /*transition: background 0.3s ease;*/
   width: auto;
-  background-color: var(--cd-primary-color);
   color: var(--cd-white);
+  background-color: var(--cd-primary-color);
 }
 
 .cd-button:hover,
 .cd-button:focus {
+  color: var(--cd-white);
   background-color: var(--cd-primary-color--lighter);
 }
 
@@ -54,6 +55,12 @@
 
 .cd-background--dark .cd-button:hover {
   background-color: var(--cd-primary-color--lighter);
+}
+
+/* When it's an anchor styled as a button */
+a.cd-button {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .cd-button--style {}
