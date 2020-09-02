@@ -1,24 +1,27 @@
 :root {
-  --cd-ocha-primary-color:  hsl(210, 70%, 56%);
-  --cd-ocha-darkbutton-default:  hsl(210, 70%, 56%);
-  --cd-ocha-lightbutton-default:  hsl(210, 70%, 81%);
-  --cd-ocha-button-hover:  hsl(210, 70%, 71%);
-  --cd-ocha-button-border:  hsl(210, 70%, 31%);
-  --cd-ocha-lightbutton-text:  hsl(210, 70%, 31%);
-  --cd-ocha-darkbutton-text:  #ffffff;
+  /* Define the Primary colour. */
+  /* Currently, --cd-ocha-blue */
+  /* --cd-primary-color: hsl(205, 98%, 36%); */
+
+  --cd-primary-color: hsl(210, 70%, 56%);
+  --cd-primary-color--lighter:  hsl(210, 70%, 71%);
+  --cd-primary-color--darker:  hsl(210, 70%, 31%);
 }
 
-.dark {
-  background-color: var(--cd-ocha-primary-color);
+/* Backgrounds */
+.cd-background--dark {
+  background-color: var(--cd-ocha-blue);
+  color: var(--cd-white);
 }
 
-.dark,
-.light {
+.cd-background--dark,
+.cd-background--light {
   text-align: center;
   padding: 1rem;
   margin-bottom: 3rem;
 }
 
+/* Default button */
 .cd-button {
   -webkit-appearance: none;
   border-radius: 3px;
@@ -28,55 +31,51 @@
   font-size: 1rem;
   /*transition: background 0.3s ease;*/
   width: auto;
-  background-color: var(--cd-ocha-lightbutton-default);
-  color: var(--cd-ocha-lightbutton-text);
-}
-
-.cd-button--lightstyle {
-  background: var(--cd-ocha-light-blue);
   color: var(--cd-white);
-}
-
-.cd-button--small {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
-.cd-button--icon {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: var(--cd-primary-color);
 }
 
 .cd-button:hover,
 .cd-button:focus {
-  background-color: var(--cd-ocha-button-hover);
+  color: var(--cd-white);
+  background-color: var(--cd-primary-color--lighter);
 }
 
 .cd-button:focus {
-  outline: 0 solid var(--cd-ocha-blue);
-  border: 2px solid var(--cd-ocha-button-border);
+  /* We remove the outline because we are adding a border. */
+  outline: 0 solid var(--cd-primary-color--lighter);
+  border: 2px solid var(--cd-primary-color--darker);
 }
 
-.cd-button--style {
-  background: var(--cd-ocha-blue);
-  color: var(--cd-white);
+.cd-background--dark .cd-button {
+  --cd-primary-color: hsl(210, 70%, 81%);
+  background-color: var(--cd-primary-color);
+  color: var(--cd-primary-color--darker);
 }
 
-.cd-button--style:hover {
-  background: var(--cd-button-hover);
-  color: var(--cd-white);
+.cd-background--dark .cd-button:hover {
+  background-color: var(--cd-primary-color--lighter);
 }
 
-.cd-button--lightstyle:hover {
-  background: var(--cd-button-hover);
-  color: var(--cd-white);
+/* When it's an anchor styled as a button */
+a.cd-button {
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.cd-button--style:focus {
-  background: var(--cd-button-focus);
-  color: var(--cd-white);
+.cd-button--style {}
+
+.cd-button--style:hover,
+.cd-button--style:focus {}
+
+.cd-button--style:focus {}
+
+
+/* Utility classes */
+.cd-button--small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .cd-button--bold {
@@ -88,6 +87,12 @@
 }
 
 /* Some buttons have SVG icons */
+.cd-button--icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .cd-button--icon svg {
   fill: var(--cd-white);
   width: 2rem;
@@ -106,6 +111,7 @@
   fill: var(--cd-white);
 }
 
+
 .cd-button--export {
   background: var(--cd-mid-grey);
   color: var(--cd-white);
@@ -114,4 +120,8 @@
 .cd-button--export:hover,
 .cd-button--export:focus {
   background: var(--cd-dark-grey);
+}
+
+.cd-button--export:focus {
+  outline: 3px solid var(--cd-ocha-blue);
 }
