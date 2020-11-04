@@ -9,8 +9,12 @@
   --cd-site-header-height: 60px;
 
   /* Color palette */
-  --cd-ocha-blue: #026cb6;
-  --cd-dark-blue: #025995;
+  --cd-ocha-blue:  hsl(205, 98%, 36%);
+  --cd-ocha-light-blue:  hsl(205, 98%, 46%);
+  --cd-button-hover-light: hsl(205, 98%, 16%);
+  --cd-button-hover-dark: hsl(205, 98%, 26%);
+  --cd-button-focus: hsl(205, 78%, 16%);
+  --cd-dark-blue: hsl(205, 98%, 16%);
   --cd-bright-blue: #80cbff;
   --cd-highlight-red: #eb5c6d;
   --cd-white: #ffffff;
