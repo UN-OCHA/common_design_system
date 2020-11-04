@@ -10,15 +10,15 @@
 
 /* Backgrounds */
 .cd-background--dark {
-  background-color: var(--cd-ocha-blue);
-  color: var(--cd-white);
+  /*background-color: var(--cd-ocha-blue);
+  color: var(--cd-white);*/
 }
 
 .cd-background--dark,
 .cd-background--light {
-  text-align: center;
+  /*text-align: center;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem;*/
 }
 
 /* Default button */
