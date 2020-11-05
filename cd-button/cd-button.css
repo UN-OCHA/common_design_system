@@ -10,15 +10,15 @@
 
 /* Backgrounds */
 .cd-background--dark {
-  /*background-color: var(--cd-ocha-blue);
-  color: var(--cd-white);*/
+  background-color: var(--cd-ocha-blue);
+  color: var(--cd-white);
 }
 
 .cd-background--dark,
 .cd-background--light {
-  /*text-align: center;
+  text-align: center;
   padding: 1rem;
-  margin-bottom: 3rem;*/
+  margin-bottom: 3rem;
 }
 
 /* Default button */
@@ -29,7 +29,7 @@
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  /*transition: background 0.3s ease;*/
+  transition: background-color 0.6s ease-out;
   width: auto;
   color: var(--cd-white);
   background-color: var(--cd-primary-color);
@@ -47,13 +47,13 @@
   border: 2px solid var(--cd-primary-color--darker);
 }
 
-.cd-background--dark .cd-button {
+.cd-button--light {
   --cd-primary-color: hsl(210, 70%, 81%);
   background-color: var(--cd-primary-color);
   color: var(--cd-primary-color--darker);
 }
 
-.cd-background--dark .cd-button:hover {
+.cd-button--light:hover {
   background-color: var(--cd-primary-color--lighter);
 }
 
