@@ -98,7 +98,7 @@ a.cd-button {
 
 /* Some buttons have SVG icons */
 .cd-button--icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
 }
