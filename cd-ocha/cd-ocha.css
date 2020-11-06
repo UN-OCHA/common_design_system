@@ -1,16 +1,1 @@
 /* See https://github.com/UN-OCHA/common_design/blob/master/sass/cd/cd-header/_cd-ocha.scss */
-
-.cd-button.cd-ocha-dropdown__see-all {
-  --cd-primary-color: hsl(210, 70%, 81%);
-  display: block;
-  width: 100%;
-  font-size: 0.875rem;
-  font-weight: 700;
-  padding: 0.75rem;
-  background-color: var(--cd-primary-color);
-  color: var(--cd-primary-color--darker);
-}
-
-.cd-button.cd-ocha-dropdown__see-all:hover {
-  background-color: var(--cd-primary-color--lighter);
-}
