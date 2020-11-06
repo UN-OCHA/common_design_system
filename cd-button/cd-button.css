@@ -13,6 +13,10 @@
 
   /* darken */
   --cd-primary-color--dark: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) - 25%));
+
+  /* cd-button--light */
+  /* Change the lightness. Other values remain the same */
+  --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 25%));
 }
 
 
@@ -55,10 +59,10 @@
   border: 2px solid var(--cd-primary-color--dark);
 }
 
+/* For buttons on dark backgrounds */
 .cd-button--light {
-  --cd-primary-color: hsl(210, 70%, 81%);
   color: var(--cd-primary-color--dark);
-  background-color: var(--cd-primary-color);
+  background-color: var(--cd-primary-color--lighter);
 }
 
 .cd-button--light:hover,
