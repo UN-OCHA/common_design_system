@@ -1,3 +1,20 @@
+.cd-hero--style-one .cd-hero__container {
+  background: rgba(0,0,0,0.85);
+}
+
+.cd-hero--style-one .cd-hero__container .cd-hero__title,
+.cd-hero--style-one .cd-hero__container .cd-hero__description {
+  color: var(--cd-white);
+}
+
+.cd-hero--style-one .cd-hero__title {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.cd-hero--style-one .cd-hero__description {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
 @media (min-width: 1024px) {
   .cd-hero--style-one::after {
     display: block;
@@ -15,23 +32,11 @@
   }
 
   .cd-hero--style-one .cd-hero__container {
+    background-color: transparent;
     text-align: center;
     position: relative;
     z-index: 2;
-    padding: 1rem 1rem 2rem;
     max-width: var(--cd-max-content-width);
   }
 
-  .cd-hero__container .cd-hero__title,
-  .cd-hero__container .cd-hero__description {
-    color: var(--cd-white);
-  }
-
-  .cd-hero--style-one .cd-hero__title {
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  }
-
-  .cd-hero--style-one .cd-hero__description {
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  }
 }
