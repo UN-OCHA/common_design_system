@@ -1,22 +1,22 @@
 :root {
   /* Define the Primary colour. */
-  /* Currently, --cd-ocha-blue */
-  /* --cd-primary-color: hsl(205, 98%, 36%); */
+  /* Based on OCHA brand guidelines */
+  /* Page 22 https://www.dropbox.com/s/j6tgps8u4u1ht4j/01_visual_identity.pdf?dl=1 */
 
   --cd-primary-color-h: 210;
   --cd-primary-color-s: 70%;
-  --cd-primary-color-l: 56%;
+  --cd-primary-color-l: 41%;
   --cd-primary-color: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), var(--cd-primary-color-l));
 
   /* lighten */
-  --cd-primary-color--light: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 15%));
+  --cd-primary-color--light: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 30%));
 
   /* darken */
-  --cd-primary-color--dark: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) - 25%));
+  --cd-primary-color--dark: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) - 26%));
 
   /* cd-button--light */
   /* Change the lightness. Other values remain the same */
-  --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 25%));
+  --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 39%));
 }
 
 
