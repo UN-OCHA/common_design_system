@@ -1,12 +1,24 @@
 :root {
   /* Define the Primary colour. */
-  /* Currently, --cd-ocha-blue */
-  /* --cd-primary-color: hsl(205, 98%, 36%); */
+  /* Based on OCHA brand guidelines */
+  /* Page 22 https://www.dropbox.com/s/j6tgps8u4u1ht4j/01_visual_identity.pdf?dl=1 */
 
-  --cd-primary-color: hsl(210, 70%, 56%);
-  --cd-primary-color--lighter:  hsl(210, 70%, 71%);
-  --cd-primary-color--darker:  hsl(210, 70%, 31%);
+  --cd-primary-color-h: 210;
+  --cd-primary-color-s: 70%;
+  --cd-primary-color-l: 41%;
+  --cd-primary-color: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), var(--cd-primary-color-l));
+
+  /* lighten */
+  --cd-primary-color--light: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 30%));
+
+  /* darken */
+  --cd-primary-color--dark: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) - 26%));
+
+  /* cd-button--light */
+  /* Change the lightness. Other values remain the same */
+  --cd-primary-color--lighter: hsl(var(--cd-primary-color-h), var(--cd-primary-color-s), calc(var(--cd-primary-color-l) + 39%));
 }
+
 
 /* Backgrounds */
 .cd-background--dark {
@@ -29,7 +41,8 @@
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  /*transition: background 0.3s ease;*/
+  text-align: center;
+  transition: background 0.6s ease;
   width: auto;
   color: var(--cd-white);
   background-color: var(--cd-primary-color);
@@ -38,27 +51,30 @@
 .cd-button:hover,
 .cd-button:focus {
   color: var(--cd-white);
-  background-color: var(--cd-primary-color--lighter);
+  background-color: var(--cd-primary-color--light);
 }
 
 .cd-button:focus {
   /* We remove the outline because we are adding a border. */
-  outline: 0 solid var(--cd-primary-color--lighter);
-  border: 2px solid var(--cd-primary-color--darker);
+  outline: 0 solid var(--cd-primary-color--light);
+  border: 2px solid var(--cd-primary-color--dark);
 }
 
-.cd-background--dark .cd-button {
-  --cd-primary-color: hsl(210, 70%, 81%);
-  background-color: var(--cd-primary-color);
-  color: var(--cd-primary-color--darker);
-}
-
-.cd-background--dark .cd-button:hover {
+/* For buttons on dark backgrounds */
+.cd-button--light {
+  color: var(--cd-primary-color--dark);
   background-color: var(--cd-primary-color--lighter);
+}
+
+.cd-button--light:hover,
+.cd-button--light:focus {
+  color: var(--cd-primary-color--dark);
+  background-color: var(--cd-primary-color--light);
 }
 
 /* When it's an anchor styled as a button */
 a.cd-button {
+  display: inline-block;
   text-decoration: none;
   cursor: pointer;
 }
@@ -88,7 +104,7 @@ a.cd-button {
 
 /* Some buttons have SVG icons */
 .cd-button--icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -106,15 +122,40 @@ a.cd-button {
   padding: 0 0 0 0.5rem;
 }
 
+.cd-button--icon.cd-button--small svg {
+  width: 1rem;
+  height: 1rem;
+  /* Icon before */
+  padding: 0 0.25rem 0 0;
+}
+
+.cd-button--icon.cd-button--small span + svg {
+/* Icon after */
+  padding: 0 0 0 0.25rem;
+}
+
 .cd-button--icon:hover svg,
 .cd-button--icon:focus svg {
   fill: var(--cd-white);
 }
 
+.cd-button--light svg {
+  fill: var(--cd-primary-color--dark);
+}
+
+.cd-button--light:hover svg,
+.cd-button--light:focus svg {
+  fill: var(--cd-primary-color--dark);
+}
 
 .cd-button--export {
   background: var(--cd-mid-grey);
   color: var(--cd-white);
+  fill: var(--cd-white);
+}
+
+.cd-button--export svg {
+  fill: var(--cd-white);
 }
 
 .cd-button--export:hover,
