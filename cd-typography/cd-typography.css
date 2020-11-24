@@ -1,0 +1,73 @@
+:root {
+  --base-font-size: 1em;
+  --base-line-height: 1.5;
+  --header-line-height: 1.25;
+}
+
+/*
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+*/
+
+body {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  background-color: lightpink;
+}
+
+@media screen and (min-width: 48em) {
+  body {
+    font-size: calc(var(--base-font-size) * 1.2);
+    line-height: calc(var(--base-line-height) * 1.2);
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (min-width: 85.375em) {
+  body {
+    font-size: calc(var(--base-font-size) * 1.3);
+    background-color: lightblue;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  body {
+    font-size: calc(var(--base-font-size) * 1.4);
+    background-color: lightyellow;
+  }
+}
+
+@media screen and (min-width: 160em) {
+  body {
+    font-size: calc(var(--base-font-size) * 1.6);
+    background-color: lightgrey;
+  }
+}
+
+
+.cd-layout-container {
+  margin: 0 auto;
+  max-width: var(--cd-max-body-width);
+}
+
+@media screen and (min-width: 85.375em) {
+  .cd-layout-container {
+    margin: 0 8%;
+    max-width: unset;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  .cd-layout-container {
+    margin: 0 12%;
+  }
+}
+
+@media screen and (min-width: 160em) {
+  .cd-layout-container {
+    margin: 0 18%;
+  }
+}
