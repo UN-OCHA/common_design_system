@@ -130,13 +130,37 @@ a.cd-button {
   cursor: pointer;
 }
 
-.cd-button--style {}
+.cd-button--outline {
+  color: var(--cd-primary-color);
+  background-color: var(--cd-white);
+  border-color: var(--cd-primary-color);
+}
 
-.cd-button--style:hover,
-.cd-button--style:focus {}
+/* For IE11 */
+@media all and (-ms-high-contrast: none) {
+  .cd-button--outline {
+    color: var(--cd-ie-primary-color);
+    background-color: var(--cd-white);
+    border-color: var(--cd-ie-primary-color);
+  }
+}
 
-.cd-button--style:focus {}
+.cd-button--outline:hover,
+.cd-button--outline:focus {
+  color: var(--cd-primary-color--dark);
+  background-color: var(--cd-white);
+  border-color: var(--cd-primary-color--dark);
+}
 
+/* For IE11 */
+@media all and (-ms-high-contrast: none) {
+  .cd-button--outline:hover,
+  .cd-button--outline:focus {
+    color: var(--cd-ie-primary-color--dark);
+    background-color: var(--cd-white);
+    border-color: var(--cd-ie-primary-color--dark);
+  }
+}
 
 /* Utility classes */
 .cd-button--small {
@@ -151,6 +175,11 @@ a.cd-button {
 
 .cd-button--uppercase {
   text-transform: uppercase;
+}
+
+.cd-button--wide {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 /* Some buttons have SVG icons */
@@ -222,6 +251,30 @@ a.cd-button {
 @media all and (-ms-high-contrast: none) {
   .cd-button--light:hover svg,
   .cd-button--light:focus svg {
+    fill: var(--cd-ie-primary-color--dark);
+  }
+}
+
+.cd-button--outline svg {
+  fill: var(--cd-primary-color);
+}
+
+/* For IE11 */
+@media all and (-ms-high-contrast: none) {
+  .cd-button--outline svg {
+    fill: var(--cd-ie-primary-color);
+  }
+}
+
+.cd-button--outline:hover svg,
+.cd-button--outline:focus svg {
+  fill: var(--cd-primary-color--dark);
+}
+
+/* For IE11 */
+@media all and (-ms-high-contrast: none) {
+  .cd-button--outline:hover svg,
+  .cd-button--outline:focus svg {
     fill: var(--cd-ie-primary-color--dark);
   }
 }
