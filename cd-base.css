@@ -6,15 +6,13 @@
   --cd-container-padding-tablet: 24px;
   --cd-container-padding-xlarge: 40px;
 
+  --cd-flow-space: 1rem;
+
   --cd-site-header-height: 60px;
 
   /* Color palette */
-  --cd-ocha-blue:  hsl(205, 98%, 36%);
-  --cd-ocha-light-blue:  hsl(205, 98%, 46%);
-  --cd-button-hover-light: hsl(205, 98%, 16%);
-  --cd-button-hover-dark: hsl(205, 98%, 26%);
-  --cd-button-focus: hsl(205, 78%, 16%);
-  --cd-dark-blue: hsl(205, 98%, 16%);
+  --cd-ocha-blue: #026cb6;
+  --cd-dark-blue: #025995;
   --cd-bright-blue: #80cbff;
   --cd-highlight-red: #eb5c6d;
   --cd-white: #ffffff;
@@ -59,6 +57,10 @@ a:focus {
   outline: 3px solid var(--cd-bright-blue);
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -68,7 +70,7 @@ a:focus {
   word-wrap: normal;
 }
 
-.icons-sprite {
+.cd-icons-sprite {
   overflow: hidden;
   display: none;
 }
