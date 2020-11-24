@@ -57,10 +57,6 @@ a:focus {
   outline: 3px solid var(--cd-bright-blue);
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
