@@ -1,19 +1,19 @@
 .cd-grid > * {
   margin-bottom: 1rem;
-  background: var(--cd-light-grey);
+  /* background: var(--cd-light-grey); */
 }
 
 /* Testing Aid */
 .cd-grid-2-col > * {
-  background: lightpink;
+  /* background: lightpink; */
 }
 
 .cd-grid-3-col > *  {
-  background: lightgreen;
+  /* background: lightgreen; */
 }
 
 .cd-grid-4-col > * {
-  background: lightblue;
+  /* background: lightblue; */
 }
 
 
@@ -27,6 +27,7 @@
   .cd-grid > * {
     flex: 0 0 48%;
     display: flex;
+    margin-bottom: 0;
   }
 
   .cd-grid-2-col.cd-grid--grow > *:last-child {
