@@ -39,12 +39,6 @@
   color: var(--cd-dark-grey);
 }
 
-.cd-hero__link:hover,
-.cd-hero__link:focus {
-  color: white;
-  background-color: var(--cd-dark-blue);
-}
-
 .cd-hero__caption {
   text-align: right;
   font-size: 0.9rem;
