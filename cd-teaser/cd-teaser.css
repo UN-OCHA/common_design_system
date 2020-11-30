@@ -25,7 +25,6 @@
 }
 
 @media (min-width: 576px) {
-
   .cd-teaser {
     display: flex;
     flex-wrap: wrap;
