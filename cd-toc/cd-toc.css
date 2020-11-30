@@ -2,6 +2,8 @@
   padding: 1rem;
   background-color: var(--cd-site-bg-color);
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .cd-toc__list {
@@ -32,6 +34,11 @@
 
 .cd-toc li a {
   text-decoration: none;
+}
+
+.cd-toc__back-to-toc {
+  text-align: right;
+  padding: 1rem 0;
 }
 
 @media (min-width: 576px) {
