@@ -1,8 +1,16 @@
 /* Utlilty classes */
 
-.cd-center {
+/* Alignment */
+.cd-align--center,
+*[class*="--center"]  {
   text-align: center;
 }
+
+.cd-align--right,
+*[class*="--right"] {
+  text-align: right;
+}
+
 
 /* Requires square image */
 *[class*="__image--rounded"] {
