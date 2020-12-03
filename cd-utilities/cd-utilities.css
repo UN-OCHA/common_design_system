@@ -11,7 +11,7 @@
   text-align: right;
 }
 
-
+/* Rounded image */
 /* Requires square image */
 *[class*="__image--rounded"] {
   display: block;
