@@ -4,7 +4,7 @@
   list-style: none;
 }
 
-.cd-styled-list li {
+.cd-styled-list > * {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -65,7 +65,7 @@
 
 @media (min-width: 576px) {
 
-  .cd-styled-list li {
+  .cd-styled-list > * {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
