@@ -23,6 +23,16 @@
   --cd-black: #000000;
   --cd-site-bg-color: #e6ecf1;
   --cd-site-bg-color--light: #ebf0f4;
+
+  /* From 01_OCHA_graphics_stylebook_visual_identity.pdf */
+  --cd-red: #cd3a1f;
+  --cd-red--light: #f8d8d3;
+  --cd-orange: #db7b18;
+  --cd-orange--light: #fae6d1;
+  --cd-yellow: #d5de26;
+  --cd-yellow--light: #f7f8d3;
+  --cd-green: #7fb92f;
+  --cd-green--light: #e8f5d6;
 }
 
 *,
