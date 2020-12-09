@@ -1,5 +1,7 @@
 <link rel=stylesheet href="../cd-base.css" type="text/css" media=screen>
 <link rel=stylesheet href="../cd-flow/cd-flow.css" type="text/css" media=screen>
+<link rel=stylesheet href="../cd-grid/cd-grid.css" type="text/css" media=screen>
+<link rel=stylesheet href="../cd-typography/cd-typography.css" type="text/css" media=screen>
 <link rel=stylesheet href="../cd-utilities/cd-utilities.css" type="text/css" media=screen>
 <link rel=stylesheet href="cd-link-list.css" type="text/css" media=screen>
 
@@ -12,14 +14,16 @@
         </div>
         <div class=" cd-link-list__container [ cd-flow ]">
           <h3 class="cd-link-list__title">
-            This is a title
+            <a href="#">
+              This is a title
+            </a>
           </h3>
           <div class="cd-link-list__description cd-max-width">
             <p>This is a brief description of the asset <a href='#'>ante hendrerit</a> tempus.</p>
           </div>
         </div>
         <div class="cd-link-list__footer">
-          <a href="#" class="cd-link-list__link">
+          <a href="#" class="cd-link-list__link" aria-hidden="true" focusable="false">
             <svg class="cd-icon cd-icon--arrow-right">
               <use xlink:href="#cd-icon--arrow-right"></use>
             </svg>
@@ -29,7 +33,7 @@
 
       <li class="cd-bumper">
         <div class="cd-link-list__image">
-          <svg class="cd-icon cd-icon--user">
+          <svg class="cd-icon cd-icon--user" aria-hidden="true" focusable="false">
             <use xlink:href="#cd-icon--user"></use>
           </svg>
         </div>
@@ -43,7 +47,7 @@
         </div>
         <div class="cd-link-list__footer">
           <a href="#" class="cd-link-list__link">
-            <svg class="cd-icon cd-icon--arrow-right">
+            <svg class="cd-icon cd-icon--arrow-right" aria-hidden="true" focusable="false">
               <use xlink:href="#cd-icon--arrow-right"></use>
             </svg>
           </a>
@@ -64,7 +68,7 @@
         </div>
         <div class="cd-link-list__footer">
           <a href="#" class="cd-link-list__link">
-            <svg class="cd-icon cd-icon--arrow-right">
+            <svg class="cd-icon cd-icon--arrow-right" aria-hidden="true" focusable="false">
               <use xlink:href="#cd-icon--arrow-right"></use>
             </svg>
           </a>
@@ -82,7 +86,94 @@
         </div>
         <div class="cd-link-list__footer">
           <a href="#" class="cd-link-list__link">
-            <svg class="cd-icon cd-icon--arrow-right">
+            <svg class="cd-icon cd-icon--arrow-right" aria-hidden="true" focusable="false">
+              <use xlink:href="#cd-icon--arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+    <hr>
+
+    <ul class="cd-grid cd-grid-2-col cd-link-list [ cd-flow ]">
+      <li class="cd-bumper">
+        <div class="cd-link-list__image">
+          <img src="https://via.placeholder.com/48x48" alt="image example">
+        </div>
+        <div class=" cd-link-list__container [ cd-flow ]">
+          <h3 class="cd-link-list__title">
+            This is a title
+          </h3>
+          <div class="cd-link-list__description cd-max-width">
+            <p>This is a brief description of the asset <a href='#'>ante hendrerit</a> tempus.</p>
+          </div>
+        </div>
+        <div class="cd-link-list__footer">
+          <a href="#" class="cd-link-list__link">
+            <svg class="cd-icon cd-icon--arrow-right" aria-hidden="true" focusable="false">
+              <use xlink:href="#cd-icon--arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+
+      <li class="cd-bumper">
+        <div class="cd-link-list__image">
+          <svg class="cd-icon cd-icon--user" aria-hidden="true" focusable="false">
+            <use xlink:href="#cd-icon--user"></use>
+          </svg>
+        </div>
+        <div class=" cd-link-list__container [ cd-flow ]">
+          <h3 class="cd-link-list__title">
+            This is a title
+          </h3>
+          <div class="cd-link-list__description cd-max-width">
+            <p>This is a brief description of the asset <a href='#'>ante hendrerit</a> tempus.</p>
+          </div>
+        </div>
+        <div class="cd-link-list__footer">
+          <a href="#" class="cd-link-list__link">
+            <svg class="cd-icon cd-icon--arrow-right" aria-hidden="true" focusable="false">
+              <use xlink:href="#cd-icon--arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+
+      <li class="cd-bumper">
+        <div class="cd-link-list__image cd-link-list__image--rounded">
+          <img src="https://via.placeholder.com/48x48" alt="image example">
+        </div>
+        <div class=" cd-link-list__container [ cd-flow ]">
+          <h3 class="cd-link-list__title">
+            Nulla auctor eleifend turpis consequat pharetra.
+          </h3>
+          <div class="cd-link-list__description cd-max-width">
+            <p>Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus.</p>
+          </div>
+        </div>
+        <div class="cd-link-list__footer">
+          <a href="#" class="cd-link-list__link">
+            <svg class="cd-icon cd-icon--arrow-right" aria-hidden="true" focusable="false">
+              <use xlink:href="#cd-icon--arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+
+      <li class="cd-bumper">
+        <div class=" cd-link-list__container [ cd-flow ]">
+          <h3 class="cd-link-list__title">
+            Nulla auctor eleifend turpis consequat pharetra.
+          </h3>
+          <div class="cd-link-list__description cd-max-width">
+            <p>Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus.</p>
+          </div>
+        </div>
+        <div class="cd-link-list__footer">
+          <a href="#" class="cd-link-list__link">
+            <svg class="cd-icon cd-icon--arrow-right" aria-hidden="true" focusable="false">
               <use xlink:href="#cd-icon--arrow-right"></use>
             </svg>
           </a>
@@ -90,6 +181,9 @@
       </li>
 
     </ul>
+
+
+
   </div>
 </div>
 
