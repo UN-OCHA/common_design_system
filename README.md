@@ -1,7 +1,18 @@
 # common_design_system
-Component library for Common Design
+## Component library for Common Design
+
+Each component is prefixed with `cd-` in its folder and file name.
+Class attributes and selectors are prefixed with `cd-` also and we use BEM naming, where applicable.
+
+Each component has a README with its **purpose, usage, caveats, and variants,** if any.
+
+Each component should be visible on [the Feature site](https://feature.commondesign-unocha-org.ahconu.org/demo#cd-component-toc), with the exception of some utility components which are used in other components.
+
+These components are also included in the common_design base theme [https://github.com/UN-OCHA/common_design/pull/110](v2) and some have a Drupal twig equivalent.
 
 ---
+
+
 This currently consists of Header with OCHA services, user menu, language switcher, logo, and main menu as assembled Header (complete), and as separate pieces where relevant.
 This means code duplication because HTML has no way to include other html pages.
 
