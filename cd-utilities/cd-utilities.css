@@ -33,3 +33,8 @@
   /* For IE11 */
   width: 100%;
 }
+
+/* Remove bottom border from last child of list */
+*[class*="__remove-border"]:last-child {
+  border-bottom: 0 none;
+}
