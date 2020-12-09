@@ -3,7 +3,6 @@
   /* Based on OCHA brand guidelines */
   /* Page 22 https://www.dropbox.com/s/j6tgps8u4u1ht4j/01_visual_identity.pdf?dl=1 */
 
-
 /* Custom properties for IE.
 /* This is needed due to inability to process calc() functions nested within color functions */
   --cd-ie-primary-color: #1f69b3;
