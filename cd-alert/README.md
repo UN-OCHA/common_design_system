@@ -17,8 +17,8 @@ None
 ### Variants
 
 ```
-.cd-alert--danger
-.cd-alert--attention
-.cd-alert--success
+.cd-alert--error
+.cd-alert--Warning
+.cd-alert--status
 
 ```
