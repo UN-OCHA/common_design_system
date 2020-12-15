@@ -1,6 +1,7 @@
 .cd-alert {
   padding: 1rem;
   margin: 1rem 0 2rem;
+  border-radius: 0.25rem;
 }
 
 .cd-alert,
