@@ -6,11 +6,11 @@
   
   .cd-hero--style-two .cd-hero__container .cd-hero__title,
   .cd-hero--style-two .cd-hero__container .cd-hero__description {
-    color: var(--cd-dark-grey);
+    color: var(--cd-dark--mid);
   }
 
   .cd-hero--style-two .cd-hero__title,
   .cd-hero--style-two .cd-hero__description {
-    color: var(--cd-dark-grey);
+    color: var(--cd-dark--mid);
   }
 }
