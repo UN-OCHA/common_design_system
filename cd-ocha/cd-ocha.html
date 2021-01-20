@@ -5,7 +5,7 @@
   <title></title>
   <link rel=stylesheet href="../cd-base.css" type="text/css" media=screen>
   <link rel=stylesheet href="../cd-button/cd-button.css" type="text/css" media=screen>
-  <link rel=stylesheet href="https://demo.commondesign-unocha-org.ahconu.org/themes/contrib/common_design/css/styles.css" type="text/css" media=screen>
+  <link rel=stylesheet href="../cd.css" type="text/css" media=screen>
   <link rel=stylesheet href="cd-ocha.css" type="text/css" media=screen>
 
   <script>document.documentElement.className = document.addEventListener ? "js" : "no-js";</script>
@@ -20,8 +20,11 @@
 
           <div class="cd-container cd-global-header__inner">
 
-            <div class="cd-ocha">
-              <div class="cd-global-header__dropdown cd-ocha-dropdown cd-dropdown" role="menu" id="cd-ocha-dropdown" aria-labelledby="cd-ocha-dropdown-toggle" data-cd-toggable="OCHA Services" data-cd-hidden="true" data-cd-icon="arrow-down" data-cd-logo="ocha-logo" data-cd-component="cd-ocha">
+            <section id="cd-ocha-services" class="cd-ocha">
+
+              <h2 id="cd-ocha-services-title">OCHA Services</h2>
+
+              <div class="cd-global-header__dropdown cd-ocha-dropdown cd-dropdown" id="cd-ocha-dropdown" aria-labelledby="cd-ocha-services-title" data-cd-toggable="OCHA Services" data-cd-icon="arrow-down" data-cd-logo="ocha-logo" data-cd-component="cd-ocha" data-cd-replace="cd-ocha-services-title">
 
                 <div class="cd-ocha-dropdown__inner">
                   <div class="cd-ocha-dropdown__section">
@@ -57,7 +60,7 @@
                 </div>
               </div>
 
-            </div>
+            </section>
 
             <div class="region region-header-top cd-global-header__actions">
               <!-- Login, user menus, additional menus, language controls can go here -->
