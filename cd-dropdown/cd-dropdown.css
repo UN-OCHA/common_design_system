@@ -11,3 +11,23 @@
 [data-cd-hidden='true'] {
   display: none;
 }
+
+.cd-dropdown {
+  display: none;
+}
+
+.cd-dropdown[data-cd-hidden='false'] {
+  display: block;
+}
+
+.no-js .cd-dropdown {
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .cd-filter[data-cd-toggable] {
+    background: red;
+    --dropdown: false;
+  }
+}
