@@ -1,5 +1,4 @@
-# common_design_system
-## Component library for Common Design
+# Component library for Common Design
 
 These components are also included in the common_design base theme [https://github.com/UN-OCHA/common_design/pull/110](v2) and some have a Drupal twig equivalent. If so, the component is visible on [the Feature site](https://feature.commondesign-unocha-org.ahconu.org/demo#cd-component-toc), with the exception of some utility components which are used in other components.
 
@@ -16,7 +15,6 @@ Updating the components is a manual process so changes made to components in thi
 - Each component should be in its own folder.
 - Each component should include a README.md and guidelines for use.
 - If a similar component already exists, discuss as a team whether to modify and extend, or create a new component.
-- Each component should be able to exist outside of Drupal.
 
 ### HTML
 - Each component should include an html file with example markup and dummy text, to best demonstrate its use and variants.
