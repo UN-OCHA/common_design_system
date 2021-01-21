@@ -14,7 +14,11 @@ Image can be an SVG icon or img element and are limited in dimension.
 Use with cd-grid for a 2 column layout.
 
 ## Caveats
-Unsure whether this should be specifici to the ul element
+Unsure whether this should be specific to the ul element
 
 ### Variants
-None
+
+```
+none
+
+```
