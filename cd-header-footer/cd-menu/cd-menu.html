@@ -3,37 +3,72 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel=stylesheet href="../cd-base.css" type="text/css" media=screen>
-  <link rel=stylesheet href="https://demo.commondesign-unocha-org.ahconu.org/themes/contrib/common_design/css/styles.css" type="text/css" media=screen>
+  <link rel=stylesheet href="../../cd-base.css" type="text/css" media=screen>
+  <link rel=stylesheet href="../../cd.css" type="text/css" media=screen>
 
 <script>document.documentElement.className = document.addEventListener ? "js" : "no-js";</script>
 </head>
 <body>
   <div class="cd-layout-container">
-    <h2 id="block-mainnavigation-menu" class="visually-hidden">Main navigation</h2>
-    <nav id="cd-site-header__nav" role="navigation" aria-labelledby="cd-nav-toggle" data-cd-toggable="Menu" data-cd-component="cd-nav" data-cd-hidden="true" data-cd-icon="arrow-down" class="menu--main cd-nav">
-      <ul class="menu">
-        <li class="menu-item menu-item--active-trail">
-          <a href="/node" data-drupal-link-system-path="node" class="is-active">Common design</a>
-        </li>
-        <li class="menu-item menu-item--expanded">
-          <button data-cd-toggler="true" aria-expanded="false" aria-haspopup="true">
-            <span class="cd-main-menu__btn-label">Menu item parent</span>
-            <svg class="cd-icon cd-icon--arrow-down">
-              <use xlink:href="#cd-icon--arrow-down"></use>
-            </svg>
-          </button>
-          <ul class="menu">
-            <li class="menu-item">
-              <a href="/node/1">Menu item child</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+
+    <header class="cd-header">
+      <div class="cd-global-header">
+        <div class="cd-container cd-global-header__inner">
+          <!-- Global header -->
+
+        </div>
+      </div>
+
+      <div class="cd-site-header">
+        <div class="cd-container cd-site-header__inner">
+
+          <div class="cd-site-header__logo">
+            <h1>
+              <a href="/" title="Home" rel="home" class="cd-site-logo">
+                <span class="visually-hidden">Common Design Demo</span>
+                <img src="../img/logos/ocha-lockup-blue.svg" alt="Home">
+              </a>
+            </h1>
+          </div>
+
+          <div class="cd-site-header__actions">
+            <!-- Search can go here -->
+
+            <div class="cd-site-header__nav-holder">
+              <nav role="navigation" id="block-mainnavigation" aria-labelledby="block-mainnavigation-menu" data-cd-toggable="Menu" data-cd-component="cd-nav" data-cd-icon="arrow-down" class="block block-menu navigation menu--main cd-nav cd-site-header__nav" data-cd-processed="true">
+
+                <h2 id="block-mainnavigation-menu">Main navigation</h2>
+
+                <ul class="menu">
+                  <li class="menu-item">
+                    <a href="/demo" id="cd-main-menu-item-0-1">Common design demo</a>
+                  </li>
+
+                  <li class="menu-item menu-item--expanded">
+                    <ul class="menu cd-main-menu__dropdown" data-cd-toggable="Layouts" data-cd-icon="arrow-down" data-cd-component="cd-main-menu" id="cd-main-menu" data-cd-processed="true">
+                      <li class="menu-item">
+                        <a href="/node/1" id="cd-main-menu-item-1-1">First sidebar</a>
+                      </li>
+
+                      <li class="menu-item">
+                        <a href="/node/2" id="cd-main-menu-item-1-2">Second sidebar</a>
+                      </li>
+
+                      <li class="menu-item">
+                        <a href="/node/3" id="cd-main-menu-item-1-3">Both sidebars</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   </div>
 
-<script src="../cd-dropdown/cd-dropdown.js" charset="utf-8"></script>
+<script src="../../cd-dropdown/cd-dropdown.js" charset="utf-8"></script>
 <script src="cd-menu.js" charset="utf-8"></script>
 
 <span class="hidden">
