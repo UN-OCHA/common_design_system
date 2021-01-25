@@ -77,24 +77,4 @@ Eg. For cd-hero component
 *There may be exceptions.
 - Add code comments to explain intent where relevant.
 
-
-### Twig
-- Include the markup without the wrapper divs. The main purpose of the twig file is to include the component on the demo page.
-- Define and attach the relevant Drupal libraries instead of linking to the CSS files.
-As this will display on the demo page (a Drupal site), the cd-base.css is replaced with styles.css (already loaded)
-
-### Add the component to the Demo page
-- Include the component in the list of Table of contents.
-- Include the twig template on the demo page with a back-to-toc link.
-
-Eg. Include cd-teaser component
-```
-// Table of Contents list.
-<li><a href="#cd-teaser">Teaser</a></li>
-
-// Include the component.
-<h3 class="cd-styleguide"><a id="cd-teaser">cd-teaser</a>
-  {% include '@cd-components/cd-back-to-toc/cd-back-to-toc.html.twig' %}</h3>
-
-{% include '@cd-components/cd-teaser/cd-teaser.html.twig' %}
 ```
