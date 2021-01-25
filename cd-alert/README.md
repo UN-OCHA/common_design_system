@@ -14,7 +14,7 @@ Title and message are width-restricted.
 Message can contain `<p>` and `<ul>` elements.
 
 ## Caveats
-Uses and SVG as an element in the markup, not a background image.
+Uses SVG icon as an element in the markup, not a background image.
 
 ### Variants
 
