@@ -80,12 +80,9 @@
   box-sizing: border-box;
 }
 
-.cd-filter__input[type='search']:focus,
-.cd-filter__input[type='text']:focus {
-  outline: 0;
-  /* RGBA and custom properties? */
-  box-shadow: 0 0 4px rgba(var(--cd-grey--mid), 0.7);
-  box-shadow: 0 0 4px var(--cd-highlight-red);
+.cd-filter input:focus {
+  outline: 3px solid var(--cd-blue--bright);
+  outline-offset: -2px;
 }
 
 .cd-filter__input::-webkit-input-placeholder {
@@ -165,8 +162,40 @@
   .cd-filter__group:nth-last-child(4):first-child,
   .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group,
   .cd-filter__group:nth-last-child(4):first-child ~ .cd-export {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group:nth-child(even),
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group:last-child {
+    padding-right: 0;
+  }
+
+  /* If five elements */
+  .cd-filter__group:nth-last-child(5):first-child,
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group,
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-export {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group:nth-child(even),
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group:last-child {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+   /* If four elements */
+  .cd-filter__group:nth-last-child(4):first-child,
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group,
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-export {
     flex: 1 0 25%;
     max-width: 25%;
+  }
+
+  .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group:nth-child(even) {
+    padding-right: 1rem;
   }
 
   .cd-filter__group:nth-last-child(4):first-child ~ .cd-filter__group:last-child {
@@ -179,6 +208,10 @@
   .cd-filter__group:nth-last-child(5):first-child ~ .cd-export {
     flex: 1 0 20%;
     max-width: 20%;
+  }
+
+  .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group:nth-child(even) {
+    padding-right: 1rem;
   }
 
   .cd-filter__group:nth-last-child(5):first-child ~ .cd-filter__group:last-child {
@@ -198,6 +231,7 @@ This hides it when that happens.*/
 }
 
 @media (min-width: 1024px) {
+  /*This is a test.*/
   .cd-filter[data-cd-toggable] {
     background: red;
     --dropdown: false;

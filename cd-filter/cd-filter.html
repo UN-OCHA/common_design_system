@@ -15,7 +15,9 @@
 <div class="cd-layout-container">
   <div class="cd-container">
 
-    <div class="cd-filter" id="cd-filter" data-cd-toggable="Modify your search" data-cd-icon="arrow-down" data-cd-component="cd-filter" data-cd-toggable-keep="true" aria-labelledby="dropdown-title">
+    <div class="cd-filter">
+
+<!--    <div class="cd-filter" id="cd-filter" data-cd-toggable="Modify your search" data-cd-icon="arrow-down" data-cd-component="cd-filter" data-cd-toggable-keep="true" aria-labelledby="dropdown-title">-->
 
       <div class="cd-filter__form">
         <h2 class="visually-hidden">Filter results</h2>
@@ -67,8 +69,14 @@
           </div>
 
           <div class="cd-export">
-            <button id="export-xlsx-" class="cd-button cd-button--export export-xlsx">Export to XLSX</button>
+            <button type="button" class="cd-button cd-button--uppercase cd-button--export cd-button--icon">
+              <span class="cd-button__text">Export</span>
+              <svg class="cd-icon cd-icon--arrow-down" aria-hidden="true" focusable="false" width="16" height="16">
+                <use xlink:href="#cd-icon--arrow-down"></use>
+              </svg>
+            </button>
           </div>
+
         </form>
       </div>
     </div>
