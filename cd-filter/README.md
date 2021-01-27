@@ -23,6 +23,6 @@ See above.
 ### Variants
 
 ```
-cd-filter--horizontal
+.cd-filter--horizontal
 
 ```
