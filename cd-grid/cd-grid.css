@@ -29,7 +29,6 @@
 
   .cd-grid > * {
     flex: 0 0 48%;
-    display: flex;
   }
 
   .cd-grid-2-col.cd-grid--grow > *:last-child {
