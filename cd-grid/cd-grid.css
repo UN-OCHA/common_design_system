@@ -1,9 +1,12 @@
 .cd-grid > * {
   margin-bottom: 1rem;
-  background: var(--cd-grey--light);
 }
 
 /* Testing Aid */
+.cd-grid > * {
+  /* background: lightgray; */
+}
+
 .cd-grid-2-col > * {
   /* background: lightpink; */
 }
@@ -26,7 +29,6 @@
 
   .cd-grid > * {
     flex: 0 0 48%;
-    display: flex;
   }
 
   .cd-grid-2-col.cd-grid--grow > *:last-child {
