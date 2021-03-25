@@ -34,7 +34,6 @@ function toggle(toggler, collapse) {
  function collapseAll(exceptions) {
   var elements = document.querySelectorAll('[data-cd-toggler][aria-expanded="true"]');
   exceptions = exceptions || [];
-  var cdDropdown = this;
 
   elements.forEach(function (element) {
     // Elements can be directed to stay open in two ways:
@@ -43,7 +42,7 @@ function toggle(toggler, collapse) {
     //
     // If neither apply, then close the element.
     if (!element.hasAttribute('data-cd-toggable-keep') && exceptions.indexOf(element) === -1) {
-      cdDropdown.toggle(element, true);
+      toggle(element, true);
     }
   });
  }
