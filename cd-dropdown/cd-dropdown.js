@@ -32,19 +32,20 @@ function toggle(toggler, collapse) {
  * Collapse all dropdowns.
  */
  function collapseAll(exceptions) {
-   var elements = document.querySelectorAll('[data-cd-toggler][aria-expanded="true"]');
-   exceptions = exceptions || [];
+  var elements = document.querySelectorAll('[data-cd-toggler][aria-expanded="true"]');
+  exceptions = exceptions || [];
+  var cdDropdown = this;
 
-   elements.forEach(function (element) {
-     // Elements can be directed to stay open in two ways:
-     //  * We can apply an attribute directly in DOM
-     //  * We can mark it as an exception when calling this function
-     //
-     // If neither apply, then close the element.
-     if (!element.hasAttribute('data-cd-toggable-keep') && exceptions.indexOf(element) === -1) {
-       toggle(element, true);
-     }
-   });
+  elements.forEach(function (element) {
+    // Elements can be directed to stay open in two ways:
+    //  * We can apply an attribute directly in DOM
+    //  * We can mark it as an exception when calling this function
+    //
+    // If neither apply, then close the element.
+    if (!element.hasAttribute('data-cd-toggable-keep') && exceptions.indexOf(element) === -1) {
+      cdDropdown.toggle(element, true);
+    }
+  });
  }
 
 
@@ -175,6 +176,7 @@ function createIcon(name, component, type) {
 
   // Note: IE 11 doesn't support classList on SVG elements.
   svgElem.setAttribute('class', classes.join(' '));
+
   svgElem.appendChild(useElem);
 
   return svgElem;
@@ -185,66 +187,66 @@ function createIcon(name, component, type) {
  */
 function createButton(element) {
   var id = element.getAttribute('id');
-   var label = element.getAttribute('data-cd-toggable');
-   var logo = element.getAttribute('data-cd-logo');
-   var logoOnly = element.hasAttribute('data-cd-logo-only');
-   var icon = element.getAttribute('data-cd-icon');
-   var component = element.getAttribute('data-cd-component');
+  var label = element.getAttribute('data-cd-toggable');
+  var logo = element.getAttribute('data-cd-logo');
+  var logoOnly = element.hasAttribute('data-cd-logo-only');
+  var icon = element.getAttribute('data-cd-icon');
+  var component = element.getAttribute('data-cd-component');
 
-   // Create the button.
-   var button = document.createElement('button');
-   button.setAttribute('type', 'button');
+  // Create the button.
+  var button = document.createElement('button');
+  button.setAttribute('type', 'button');
 
-   // ID.
-   button.setAttribute('id', id + '-toggler');
+  // ID.
+  button.setAttribute('id', id + '-toggler');
 
-   // @todo rename logo/icon to be more inclusive if needed.
-   //  Eg. prefix/suffix or pre/post
-   // Pre-label SVG icon.
-   if (logo) {
-     button.appendChild(createIcon(logo, component, 'logo'));
-   }
+  // @todo rename logo/icon to be more inclusive if needed.
+  //  Eg. prefix/suffix or pre/post
+  // Pre-label SVG icon.
+  if (logo) {
+    button.appendChild(createIcon(logo, component, 'logo'));
+  }
 
-   // Button label.
-   var labelWrapper = document.createElement('span');
-   labelWrapper.appendChild(document.createTextNode(label));
-   button.appendChild(labelWrapper);
+  // Button label.
+  var labelWrapper = document.createElement('span');
+  labelWrapper.appendChild(document.createTextNode(label));
+  button.appendChild(labelWrapper);
 
-   // Only show the logo icon if requested but keep the title visible
-   // to assistive technologies.
-   if (logo && logoOnly) {
-     labelWrapper.classList.add('visually-hidden');
-   }
+  // Only show the logo icon if requested but keep the title visible
+  // to assistive technologies.
+  if (logo && logoOnly) {
+    labelWrapper.classList.add('visually-hidden');
+  }
 
-   // Post-label SVG icon.
-   if (icon) {
-     // @todo This could default to dropdown arrow icon.
-     button.appendChild(createIcon(icon, component, 'icon'));
-   }
+  // Post-label SVG icon.
+  if (icon) {
+    // @todo This could default to dropdown arrow icon.
+    button.appendChild(createIcon(icon, component, 'icon'));
+  }
 
-   // BEM for class selectors.
-   if (component) {
-     button.classList.add(component + '__btn');
-     labelWrapper.classList.add(component + '__btn-label');
-   }
+  // BEM for class selectors.
+  if (component) {
+    button.classList.add(component + '__btn');
+    labelWrapper.classList.add(component + '__btn-label');
+  }
 
-   // Do not collapse the dropdown when clicking outside.
-   if (element.hasAttribute('data-cd-toggable-keep')) {
-     button.setAttribute('data-cd-toggable-keep', '');
-   }
+  // Do not collapse the dropdown when clicking outside.
+  if (element.hasAttribute('data-cd-toggable-keep')) {
+    button.setAttribute('data-cd-toggable-keep', '');
+  }
 
-   // Alternate label for when the button is expanded.
-   if (element.hasAttribute('data-cd-toggable-expanded')) {
-     labelWrapper.setAttribute('data-cd-label-switch', element.getAttribute('data-cd-toggable-expanded'));
-   }
+  // Alternate label for when the button is expanded.
+  if (element.hasAttribute('data-cd-toggable-expanded')) {
+    labelWrapper.setAttribute('data-cd-label-switch', element.getAttribute('data-cd-toggable-expanded'));
+  }
 
-   return button;
+  return button;
 }
 
 /**
  * Transform the element into a dropdown menu.
  */
-function setToggable(element, toggler) {
+function setToggable(element) {
   var toggler = element.previousElementSibling;
 
   // Skip if the toggler is not a button or has already been processed.
@@ -269,6 +271,7 @@ function setToggable(element, toggler) {
       return;
     }
   }
+
   // Create a button to toggle the element.
   if (!toggler || element.hasAttribute('data-cd-replace')) {
     toggler = createButton(element);
@@ -355,10 +358,11 @@ function updateToggable(element) {
   else {
     setToggable(element);
   }
+
   // Mark the element as processed. This is notably used to remove the
   // initial hidden state that is used to prevent flash of content.
   if (!element.hasAttribute('data-cd-processed')) {
-  element.setAttribute('data-cd-processed', true);
+    element.setAttribute('data-cd-processed', true);
   }
 }
 
