@@ -1,1 +1,6 @@
 /* See https://github.com/UN-OCHA/common_design/tree/main/sass/cd/cd-footer */
+
+/* Rule to override path to logo */
+.cd-mandate__logo {
+    background: url(../../img/logos/ocha-lockup.svg) 0 no-repeat;
+}
