@@ -4,7 +4,7 @@
 A list of links to page headings for onpage navigation.
 
 ## Caveats
-This is currently using cd-utilities for the float and list style rules.
+This is currently using cd-utilities for the float rules.
 
 ### Variants
 

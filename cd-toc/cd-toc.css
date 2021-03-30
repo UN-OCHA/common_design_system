@@ -12,7 +12,7 @@
   margin-bottom: 0;
 }
 
-.cd-toc ol:not(.cd-toc__list--roman):not(.cd-toc__list--roman ol) {
+.cd-toc ol {
   counter-reset: item;
 }
 
@@ -24,13 +24,17 @@
   padding: 0 1rem 0 0;
 }
 
-.cd-toc__list:not(.cd-toc__list--roman) li {
+.cd-toc__list li {
   display: block;
 }
 
-.cd-toc__list:not(.cd-toc__list--roman) li:before {
+.cd-toc__list li:before {
   content: counters(item, ".") ". ";
   counter-increment: item;
+}
+
+.cd-toc__list--roman li:before {
+  content: counters(item, ".", upper-roman) ". ";
 }
 
 .cd-toc__title {

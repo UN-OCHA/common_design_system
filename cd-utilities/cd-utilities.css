@@ -64,9 +64,3 @@ div[class*='__title'] > * {
 *[class*='__remove-border']:last-child {
   border-bottom: 0 none;
 }
-
-/* List styles */
-ol[class*='--roman'],
-ol[class*='--roman'] ol {
-  list-style-type: upper-roman;
-}
