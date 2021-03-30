@@ -60,7 +60,6 @@ dd {
   }
 }
 
-h1
 h2,
 h3,
 h4,
@@ -82,6 +81,7 @@ h1 {
 }
 
 .cd-page-title {
+  font-size: var(--cd-font-size--2xmedium);
   margin-top: 0;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
