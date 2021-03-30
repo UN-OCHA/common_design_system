@@ -4,7 +4,7 @@
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
-  width: 100%;
+  display: inline-block;
 }
 
 .cd-toc__list,
@@ -52,8 +52,9 @@
 }
 
 @media (min-width: 576px) {
-  .cd-toc {
+  div[class*='cd-toc--float'] {
     max-width: 16rem;
+    display: block;
   }
 
   .cd-toc--float-left {
@@ -74,7 +75,7 @@
 }
 
 @media (min-width: 1024px) {
-  .cd-toc {
+  div[class*='cd-toc--float'] {
     max-width: 24rem;
   }
 }
