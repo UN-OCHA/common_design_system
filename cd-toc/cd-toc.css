@@ -7,7 +7,8 @@
   width: 100%;
 }
 
-.cd-toc__list {
+.cd-toc__list,
+.cd-toc__list ol {
   padding: 0;
   margin-bottom: 0;
 }
