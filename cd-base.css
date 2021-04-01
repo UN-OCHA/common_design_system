@@ -77,9 +77,12 @@ https://brand.unocha.org/d/xEPytAUjC3sH/visual-identity#/basics/fonts/advanced-u
   --cd-site-header-height: 60px;
 
   /* Color palette */
-  --cd-ocha-blue: #026cb6;
-  --cd-blue--dark: #025995;
-  --cd-blue--bright: #80cbff;
+  /* OCHA blue is one colour ramp darker than brand blue */
+  --cd-ocha-blue: #1f69b3;
+  /* Dark blue is two colour ramps darker than brand blue */
+  --cd-blue--dark: #144372;
+  /* Bright blue is one colour ramps lighter than brand blue */
+  --cd-blue--bright: #82b5e9;
   --cd-highlight-red: #eb5c6d;
   --cd-white: #fff;
   --cd-grey--light: #f2f2f2;
