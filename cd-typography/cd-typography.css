@@ -76,8 +76,7 @@ h1 {
   font-weight: 700;
   font-size: var(--cd-font-size--2xmedium);
 }
-
-@media (min-width:768px) {
+@media (min-width:1024px) {
   h1 {
     font-size: var(--cd-font-size--2xlarge);
   }
@@ -97,21 +96,36 @@ h1 {
 }
 
 h2 {
+  font-size: var(--cd-font-size--2xbase);
+}
+@media (min-width:1024px) {
   font-size: var(--cd-font-size--2xmedium);
 }
 
 h3 {
+  font-size: var(--cd-font-size--large);
+}
+@media (min-width:1024px) {
   font-size: var(--cd-font-size--2xbase);
 }
 
 h4 {
+  font-size: var(--cd-font-size--medium);
+}
+@media (min-width:1024px) {
   font-size: var(--cd-font-size--large);
 }
 
 h5 {
+  font-size: var(--cd-font-size--base);
+}
+@media (min-width:1024px) {
   font-size: var(--cd-font-size--medium);
 }
 
 h6 {
+  font-size: 1rem;
+}
+@media (min-width:1024px) {
   font-size: var(--cd-font-size--base);
 }
